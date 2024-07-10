@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+    <!-- <title>Document</title> -->
+     <style>
+        .bgc{
+            background-color: orange;
+        }
+     </style>
+</head>
+<body>
+    <div class="bg_black">
+        <h2 class="heading" id="Dom">DOm learning</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button onclick="handleclick()">clickme</button>
+        <ul>
+            <li  class ="listItem">First</li>
+            <!-- //turn this red -->
+            <li  class ="listItem">second</li> <!--turn this to blue-->
+            <li  class ="listItem">Third</li>
+            <li  class ="listItem">Fourth</li>
+        </ul>
+    </div>
+    <script>
+        // function handleclick(){
+        //     document.getElementById('Dom').innerHTML="<h1>document object model</h1>"
+
+        // }
+        // document.getElementById('Dom').setAttribute("class"," heading bgc")//it will change the code in the browser but not in the real code
+        // const ele=document.querySelector('ul')
+        // const li=document.querySelector('li').style.backgroundColor="red"
+        // const ele2=document.querySelector('ul')
+        // const li2=document.querySelectorAll('li')
+        // li2[1].style.backgroundColor="blue"
+        // //turn all the li to green
+        // li2.forEach((l)=>{
+        //     l.style.listStyle="none"
+
+        // })
+        //do the same operation using the class
+        const li=document.getElementsByClassName('listItem')
+        const arr=Array.from(li)
+        //here we can not change the style
+        arr.forEach((ele)=>{
+            ele.textContent="amar"
+        })
+        
+
+
+    </script>
+</body>
+</html>
