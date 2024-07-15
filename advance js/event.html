@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li><img id="img1" width="100px" height="100px" src="https://images.pexels.com/photos/26329282/pexels-photo-26329282/free-photo-of-a-plate-topped-with-figs-and-cream-cheese.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img.jpg" /></li>
+            <li><img id="img2" width="100px" height="100px" src="https://images.pexels.com/photos/26699774/pexels-photo-26699774/free-photo-of-beach-umbrellas-and-chairs-on-the-beach.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img2" /></li>
+            <li><img id="img3" width="100px" height="100px" src="https://images.pexels.com/photos/2246502/pexels-photo-2246502.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="img2"/></li>
+            <li><img id="img4" width="100px" height="100px" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img2"/></li>
+            <li><img id="img5" width="100px" height="100px" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img2"/></li>
+            <li><a id="instagram" href="https://www.instagram.com/" target="_blank">instagram</a></li>
+        </ul>
+    </div>
+    <script>
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e.target.tagName)
+
+            if(e.target.tagName == 'IMG'){
+                
+                const deletele=e.target.parentNode
+                deletele.remove()//one way
+            }
+            
+            // deletele.parentNode.removeChild(deletele)//onother way
+
+        },false)
+        document.querySelector('#instagram').addEventListener('click',function(e){
+            e.preventDefault();
+            console.log("prevented to form the link")
+        })
+
+
+
+
+        // document.querySelector('#img1').addEventListener('click',function(e){
+        //     console.log(e)
+        //     console.log("inside the image one")
+        // },false)
+        // document.querySelector('#images').addEventListener('click',function(e){
+        //       console.log(e)  
+        //       console.log("inside the ul")
+        // },false)
+
+
+        // document.querySelector('#img1').addEventListener('click',function(){
+        //     alert("clicked img1")
+        // },false)
+        // function function1(){
+        //     alert("img2")
+
+        // }
+
+    </script>
+    
+</body>
+</html>
