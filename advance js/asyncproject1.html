@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg changer</title>
+</head>
+<body style="background-color: black; color: wheat;">
+    <h2> click start to change the back ground and stop to stop the bagouround cganger</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+        function randomcolor(){
+            let hex="#";
+            const color="0123456789ABCDEF";
+            for( let i=0;i<6;i++){
+                hex +=color[ Math.round(Math.random() * 16)];
+                
+         
+            }
+            return hex;
+        }
+        let intervalref;
+        function startChanging(){
+            if(!intervalref){
+             intervalref=setInterval(()=>{
+                document.body.style.backgroundColor=randomcolor();
+            },1000)
+        }
+        }
+        function stopChanging(){
+            clearInterval(intervalref);
+            intervalref=null;
+        }
+        // console.log(randomcolor());
+        document.querySelector("#start").addEventListener("click",function(){
+            startChanging();
+        })
+        document.querySelector("#stop").addEventListener("click",function(){
+            stopChanging();
+        })
+    </script>
+</body>
+</html>
